@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body>
+    <!-- kalo blok itu untuk ukurannya memenuhi satu layar kesamping jadi yang lain kebawah tapi kalo nambahin foto itu ke bawah fotonya -->
+    <div class="bg-blue-600 block">kotak 1 (block)</div>
+    <div class="bg-blue-300 block">kotak 2 (block)</div>
+
+    <br>
+    <!-- kalo inline mau di tambahin h/w itu gak akan masuk jadi emg ngikutin content yang ada didalam -->
+    <span class="bg-pink-900 inline">kotak 1 (inline)</span>
+    <span class="bg-pink-400 inline">kotak 2 (inline)</span>
+
+    <br>
+    <!-- kalo pake inline-blok bisa pake w & h  -->
+    <span class="bg-green-950 inline-block w-24 h-12">kotak 1</span>
+    <span class="bg-green-600 inline-block w-24 h-12">kotak 1</span>
+    
+    <!-- span= untuk tulisan  kalo div itu untuk membungkus -->
+     <br>
+
+     <!-- flek itu buat kesamping {horizontal} kalo pake flek itu buat naro layoutnya ketengah,sampingan kanan/kiri-->
+      <!-- flek itu temenan{bersamaan} sama justify, gap, align{di tailwind gak ada}, item -->
+       <!-- justify = atur arah horizontal
+            gap = atur jarak antar item
+            item = atur arah vertikal
+             -->
+     
+     <div class="flex flex-col gap-2 bg-amber-950 p-2">
+        <div class="bg-amber-700 w-16 h-16">a</div>
+     <div class="bg-amber-500 w-16 h-16">b</div>
+     <div class="bg-amber-300 w-16 h-16">c</div>
+     </div>
+
+</body>
+</html>

@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>portoan tailwind</title>
+    <link
+      rel="shortcut icon"
+      href="https://i.pinimg.com/736x/58/60/b0/5860b08cb8aab4c09a092ef42f63f33f.jpg"
+      type="image/x-icon"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Federant&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <style>
+    .font-1 {
+      font-family: "Federant", serif;
+    }
+    .text-cerah1 {
+      color: #ef88ad;
+    }
+    .text-cerah2 {
+      color: #a53860;
+    }
+    .text-cerah3 {
+      color: #670d2f;
+    }
+    .text-cerah4 {
+      color: #3a0519;
+    }
+  </style>
+  <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    rel="stylesheet"
+  />
+  <body>
+    <!-- aria untuk disabilitas -->
+    <nav
+      class="sticky top-0 z-50 bg-[#A53860]/90 backdrop-blur border-b border-white"
+      aria-label="primary"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- untuk menu laptop -->
+        <div class="flex items-center justify-between h-16">
+          <!-- kenapa di tanda petik ada # biar rapih aja codingannya -->
+          <!-- xl = 20px -->
+          <!-- uppercase untuk capslook / gedein huruf -->
+          <a
+            href="#"
+            class="flex items-center text-white text-xl font-1 uppercase tracking-wider font-medium"
+            >Bil</a
+          >
+
+          <button
+            id="hamburger"
+            class="md:hidden p-2 mt-1 rounded hover:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-orange-500"
+            aria-expanded="false"
+            aria-controls="main-menu"
+            aria-label="Toggle menu"
+          >
+            <svg
+              id="icon-open"
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+            <svg
+              id="icon-close"
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6 hidden"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </button>
+          <div id="main menu" class="hidden md:flex md:items-center md:gap-2">
+            <div
+              class="flex flex-col md:flex-row md:items-center md:gap-2 text-right md:text-left"
+            >
+              <a
+                href="#AboutMe"
+                class="px-3 py-2 text-slate-200 hover:text-[#F564A9] uppercase font-jay font-bold"
+                >About Me</a
+              >
+              <a
+                href="#whatiDo"
+                class="px-3 py-2 text-slate-200 hover:text-[#F564A9] uppercase font-jay font-bold"
+                >What i do</a
+              >
+              <a
+                href="#portoan"
+                class="px-3 py-2 text-slate-200 hover:text-[#F564A9] uppercase font-jay font-bold"
+                >Portfolio</a
+              >
+              <a
+                href="#BlogMe"
+                class="px-3 py-2 text-slate-200 hover:text-[#F564A9] uppercase font-jay font-bold"
+                >My Blog</a
+              >
+              <a
+                href="#skill"
+                class="px-3 py-2 text-slate-200 hover:text-[#F564A9] uppercase font-jay font-bold"
+                >Skill</a
+              >
+              <a
+                href="#kontak"
+                class="bg-[#EF88AD] hover:bg-[#F564A9] rounded-xl px-4 py-2 font-bold text-slate-200 justify-center items-center"
+                >Contact</a
+              >
+            </div>
+          </div>
+          <!-- menu untuk hp -->
+          <div
+            id="mobile-panel"
+            class="md:hidden hidden border-t border-slate-800 py-2"
+          >
+            <a
+              href="#"
+              class="block px-3 py-2 text-slate-300 hover:text-[#F564A9]"
+              >A bout me</a
+            >
+            <a
+              href="#"
+              class="block px-3 py-2 text-slate-300 hover:text-[#F564A9]"
+              >What i do</a
+            >
+            <a
+              href="#"
+              class="block px-3 py-2 text-slate-300 hover:text-[#F564A9]"
+              >Portfolio</a
+            >
+            <a
+              href="#BlogMe"
+              class="block px-3 py-2 text-slate-300 hover:text-[#F564A9]"
+              >My Blog</a
+            >
+            <a
+              href="#skill"
+              class="block px-3 py-2 text-slate-300 hover:text-[#F564A9]"
+              >Skill</a
+            >
+            <a
+              href="#kontak"
+              class="block bg-[#EF88AD] hover:bg-[#F564A9] rounded-xl px-4 py-2 font-bold text-slate-200 justify-center items-center"
+              >Contact</a
+            >
+           
+          </div>
+        </div>
+      </div>
+    </nav>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      const reduceMotion = window.matchMedia(
+        "(prefers-reduced-motion: reduce)"
+      ).matches;
+      AOS.init({
+        duration: reduceMotion ? 0 : 600,
+        once: true,
+      });
+
+      const btn = document.getElementById("hamburger");
+      const iconOpen = document.getElementById("icon-open");
+      const iconClose = document.getElementById("icon-close");
+      const menu = document.getElementById("main-menu");
+      const panel = document.getElementById("mobile-panel");
+
+      btn?.addEventListener("click", () => {
+        const expanded = btn.getAttribute("aria-expanded") === "true";
+        btn.setAttribute("aria-expanded", String(!expanded));
+        iconOpen.classList.toggle("hidden");
+        iconClose.classList.toggle("hidden");
+        panel.classList.toggle("hidden");
+      });
+
+      panel?.querySelectorAll("a").forEach((a) => {
+        a.addEventListener("click", () => {
+          btn.setAttribute("aria-expanded", "false");
+          iconOpen.classList.remove("hidden");
+          iconClose.classList.add("hidden");
+          panel.classList.add("hidden");
+        });
+      });
+    </script>
+    <section id="AboutMe" class="bg-[#670D2F]">
+      <div
+        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 grid md:grid-cols-2 gap-10 items-center"
+      >
+        <div
+          class="order-2 lg:order-2 border-[10px] sm:border-[15px] border-[#A53860] rounded-2xl shadow-2xl overflow-higt"
+        >
+          <img src="fotoMe.jpeg" class="w-full h-full object-cover" alt="" />
+        </div>
+        <div class="order-1 lg:order-1">
+          <h1 class="font-1 text-3xl font-bold leading-tight text-white">
+            Hello, I'm <span class="text-cerah1">liya</span>
+          </h1>
+          <h2 class="text-2xl font-semibold text-white">
+            Web/Mobile Developer
+          </h2>
+          <p class="mt-5 leading-relaxed text-white">
+            Selamat datang di website aku, sekian dan terimakasih sudah mampir
+            kesini yaw.....
+          </p>
+
+          <div class="mt-6 flex flex-wrap items-center gap-4">
+            <a
+              href="#"
+              class="inline-flex text-2xl items-center justify-center rounded-2xl bg-[#A53860] hover:bg-[#EF88AD] text-white px-4 py-3"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+            <a
+              href="#"
+              class="inline-flex text-2xl items-center justify-center rounded-2xl bg-[#A53860] hover:bg-[#EF88AD] text-white px-4 py-3"
+              ><i class="fa-brands fa-youtube"></i
+            ></a>
+            <a
+              href="#"
+              class="inline-flex text-2xl items-center justify-center rounded-2xl bg-[#A53860] hover:bg-[#EF88AD] text-white px-4 py-3"
+              ><i class="fa-brands fa-github-alt"></i
+            ></a>
+            <a
+              href="#"
+              class="inline-flex text-2xl items-center justify-center rounded-2xl bg-[#A53860] hover:bg-[#EF88AD] text-white px-4 py-3"
+              ><i class="fa-brands fa-php"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+      <!-- leanding = untuk jarak baris di text
+         traking = jarak antar huruf -->
+      <!-- kalo pake flex-wrap{kalo kepenuhan elemennya di samping bisa kebawah sendiri} sama flex-row {numpuk elemennya kalo kebanyakan} mereka berdua sama sama flex dan hampir sama  -->
+    </section>
+    <!-- What I do -->
+    <section id="whatiDo" class="bg-[#A53860]">
+      <div
+        class="max-x-7xl mx-auto px-4 md:px-8 py-20 border-t border-[#3A0519]"
+      >
+        <div class="text-center mb-12">
+          <h2
+            class="text-3xl font-bold text-white underline underline-offset-8 decoration-[#3A0519] decoration-4 uppercase tracking-widest"
+          >
+            What I Do
+          </h2>
+        </div>
+        <div class="grid md:grid-cols-3 gap-6">
+          <!-- pertama -->
+          <div class="rounded-xl bg-[#670D2F]/70 shadow-2xl p-6">
+            <div class="flex items-center gap-3 mb-3">
+              <div
+                class="w-10 h-10 grid rounded-full bg-[#EF88AD] text-white place-items-center"
+              >
+                <i class="fa-solid fa-computer"></i>
+              </div>
+              <div>
+                <h3 class="text-white text-lg tracking-wider font-bold">
+                  Web design
+                </h3>
+              </div>
+            </div>
+            <p class="text-white">halo saya nabila,, saya mahasiswi jurusan programmer dan saya bekerja di bidang pembuatan website, seperti website UMKM atau perusahaan.</p>
+          </div>
+          <!-- kedua -->
+          <div class="rounded-xl bg-[#670D2F]/70 shadow-2xl p-6">
+            <div class="flex items-center gap-3 mb-3">
+              <div
+                class="w-10 h-10 grid rounded-full bg-[#EF88AD] text-white place-items-center"
+              >
+                <i class="fa-solid fa-mobile-screen"></i>
+              </div>
+              <div>
+                <h3 class="text-white text-lg tracking-wider font-bold">
+                  App Design
+                </h3>
+              </div>
+            </div>
+            <p class="text-white">halo saya nabila,, saya mahasiswi jurusan programmer dan saya bekerja juga di bidang app mobile, seperti pembuatan aplikasi yang menarik dan bermanfaat untuk perusahaan.</p>
+          </div>
+          <!-- ketiga -->
+          <div class="rounded-xl bg-[#670D2F]/70 shadow-2xl p-6">
+            <div class="flex items-center gap-3 mb-3">
+              <div
+                class="w-10 h-10 grid rounded-full bg-[#EF88AD] text-white place-items-center"
+              >
+                <i class="fa-solid fa-earth-asia"></i>
+              </div>
+              <div>
+                <h3 class="text-white text-lg tracking-wider font-bold">
+                  UX/UI
+                </h3>
+              </div>
+            </div>
+            <p class="text-white">halo saya nabila,, saya mahasiswi jurusan programmer dulu di jenjang smk aku belajar ui/ux dan aku menerima job untuk para pengusaha baru/untuk umkm.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- portoan -->
+    <section id="portoan" class="bg-[#670D2F]">
+        <div
+        class="max-x-7xl mx-auto px-4 md:px-8 py-20 border-t border-[#3A0519]"
+      >
+        <div class="text-center mb-12">
+          <h2
+            class="text-3xl font-bold text-white underline underline-offset-8 decoration-[#3A0519] decoration-4 uppercase tracking-widest"
+          >
+            portfolio
+          </h2>
+        </div>
+         <div class="grid md:grid-cols-3 gap-6">
+          <!-- pertama -->
+          <div class="rounded-xl bg-[#A53860] shadow-2xl p-6">
+            <a href="https://id.pinterest.com/pin/254453447691916597/">
+            <img src="fotoke1.jpg" alt="" class=" w-full h-[250px] object-cover mb-3">
+
+            </a>
+            <h3 class="font-semibold text-center text-3xl text-white">website with react js</h3>
+            <p class="text-white text-center">jdsnajkdnsjiucnelosadcjdsiweubncmjksaixmc</p>
+              </div>
+              <!-- kedua -->
+               <div class="rounded-xl bg-[#A53860] shadow-2xl p-6">
+            <img src="fotoke1.jpg" alt="" class=" w-full h-[250px] object-cover mb-3">
+            <h3 class="font-semibold text-center text-3xl text-white">website with react js</h3>
+            <p class="text-white text-center">jdsnajkdnsjiucnelosadcjdsiweubncmjksaixmc</p>
+              </div>
+              <!-- ketiga -->
+               <div class="rounded-xl bg-[#A53860] shadow-2xl p-6">
+            <img src="fotoke1.jpg" alt="" class=" w-full h-[250px] object-cover mb-3">
+            <h3 class="font-semibold text-center text-3xl text-white">website with react js</h3>
+            <p class="text-white text-center">jdsnajkdnsjiucnelosadcjdsiweubncmjksaixmc</p>
+              </div>  
+          </div>
+    </section>
+
+    <!-- My Skill -->
+    <section id="skill" class="bg-[#8b244b]">
+      <div
+        class="max-x-7xl mx-auto px-4 md:px-8 py-20 border-t border-[#3A0519]"
+      >
+        <div class="text-center mb-12">
+          <h2
+            class="text-3xl font-bold text-white underline underline-offset-8 decoration-[#3A0519] decoration-4 uppercase tracking-widest"
+          >
+            My Skill
+          </h2>
+        </div>
+        <h2 class="text-2xl mb-2 font-semibold text-white m-3">Web Developer</h2>
+        <p class="text-white mb-7 m-3">Saya memiliki skill seperti berikut.</p>
+        <div class="grid md:grid-cols-4 gap-6">
+          <!-- pertama -->
+          <div class="rounded-xl bg-[#670D2F]/70 inline-block w-2xs h-[70px] shadow-2xl p-6">
+            <div class="w-1/2">
+                <img src="AI_Logo__Adobe_Illustrator_-removebg-preview.png" alt="" class="ml-[90px] w-1/2 -m-5 flex items-center">
+            </div>
+          </div>
+          <!-- kedua -->
+           <div class="rounded-xl bg-[#670D2F]/70 inline-block w-2xs h-[70px] shadow-2xl p-6">
+            <div class="w-1/2">
+                <img src="download__4_-removebg-preview.png" alt="" class="ml-[90px] w-1/2 -m-5 flex items-center">
+            </div>
+          </div>
+          <!-- ketiga -->
+          <div class="rounded-xl bg-[#670D2F]/70 inline-block w-2xs h-[70px] shadow-2xl p-6">
+            <div class="w-1/2">
+                <img src="html logo.png" alt="" class="ml-[100px] w-1/3 -m-3 flex items-center">
+            </div>
+          </div>
+          <!-- keempat -->
+           <div class="rounded-xl bg-[#670D2F]/70 inline-block w-2xs h-[70px] shadow-2xl p-6">
+            <div class="w-1/2">
+                <img src="JavaScript é uma linguagem de programação que permite a você implementar itens complexos em páginas web — toda vez que uma página da web faz mais do que simplesmente mostrar a você informação estática_.jpg" alt="" class="ml-[100px] w-1/3 -m-3 flex items-center">
+            </div>
+          </div>
+          <!-- kelima -->
+           <div class="rounded-xl bg-[#670D2F]/70 inline-block w-2xs h-[70px] shadow-2xl p-6">
+            <div class="w-1/2">
+                <img src="Adobe_Xd_Logo_PNG_Vector__SVG__Free_Download-removebg-preview.png" alt="" class="ml-[90px] w-1/2 -m-5 flex items-center">
+            </div>
+          </div>
+          <!-- keenam -->
+           <div class="rounded-xl bg-[#670D2F]/70 inline-block w-2xs h-[70px] shadow-2xl p-6">
+            <div class="w-1/2">
+                <img src="wibu remove.png" alt="" class="ml-[90px] w-1/2 -m-5 flex items-center">
+            </div>
+          </div>
+          <!-- ketujuh -->
+           <div class="rounded-xl bg-[#670D2F]/70 inline-block w-2xs h-[70px] shadow-2xl p-6">
+            <div class="w-1/2">
+                <img src="berlian.png" alt="" class="ml-[90px] w-1/2 -m-5 flex items-center">
+            </div>
+          </div>
+          <!-- kedelapan -->
+           <div class="rounded-xl bg-[#670D2F]/70 inline-block w-2xs h-[70px] shadow-2xl p-6">
+            <div class="w-1/2">
+                <img src="Figma__The_Collaborative_Interface_Design_Tool-removebg-preview.png" alt="" class="ml-[90px] w-1/2 -m-5 flex items-center">
+            </div>
+          </div>
+    </section>
+
+    </section>
+    <!-- My Blog -->
+    <section id="BlogMe" class="bg-[#A53860]">
+      <div
+        class="max-x-7xl mx-auto px-4 md:px-8 py-20 border-t border-[#3A0519]"
+      >
+        <div class="text-center mb-12">
+          <h2
+            class="text-3xl font-bold text-white underline underline-offset-8 decoration-[#3A0519] decoration-4 uppercase tracking-widest"
+          >
+            My Blog
+          </h2>
+        </div>
+        <div class="grid md:grid-cols-3 gap-6">
+          <!-- pertama -->
+          <div class="rounded-xl bg-[#670D2F]/70 shadow-2xl p-6">
+            <div class="flex items-center gap-3 mb-8">
+              <div
+                class="text-white -mt-7 font-bold place-items-center "
+              >
+                <h2 class="mb-4 font-bold text-white underline underline-offset-10 decoration-slate-300 decoration-1">Aug</h2>
+                <h2>24</h2>
+              </div>
+              <div class="pt-3">
+                <p class="text-pink-300 mb-1 pt-2">jane doe</p>
+                <h3 class="text-white text-lg tracking-wider font-bold mb-1">
+                  Review Jasa Website
+                </h3>
+                <p class="text-white mb-1">jasanya bagus, good job dan cepat.</p>
+                <p class="text-pink-300">read more.</p>
+              </div>
+            </div>
+          </div>
+          <!-- kedua -->
+           <div class="rounded-xl bg-[#670D2F]/70 shadow-2xl p-6">
+            <div class="flex items-center gap-3 mb-8">
+              <div
+                class="text-white -mt-7 font-bold place-items-center "
+              >
+                <h2 class="mb-4 font-bold text-white underline underline-offset-10 decoration-slate-300 decoration-1">Aug</h2>
+                <h2>24</h2>
+              </div>
+              <div class="pt-3">
+                <p class="text-pink-300 mb-1 pt-2">jane doe</p>
+                <h3 class="text-white text-lg tracking-wider font-bold mb-1">
+                  Review Jasa Website
+                </h3>
+                <p class="text-white mb-1">jasanya bagus, good job dan cepat.</p>
+                <p class="text-pink-300">read more.</p>
+              </div>
+            </div>
+          </div>
+          <!-- ketiga -->
+           <div class="rounded-xl bg-[#670D2F]/70 shadow-2xl p-6">
+            <div class="flex items-center gap-3 mb-8">
+              <div
+                class="text-white -mt-7 font-bold place-items-center "
+              >
+                <h2 class="mb-4 font-bold text-white underline underline-offset-10 decoration-slate-300 decoration-1">Aug</h2>
+                <h2>24</h2>
+              </div>
+              <div class="pt-3">
+                <p class="text-pink-300 mb-1 pt-2">jane doe</p>
+                <h3 class="text-white text-lg tracking-wider font-bold mb-1">
+                  Review Jasa Website
+                </h3>
+                <p class="text-white mb-1">jasanya bagus, good job dan cepat.</p>
+                <p class="text-pink-300">read more.</p>
+              </div>
+            </div>
+          </div>
+    </section>
+
+    <!-- contant me -->
+    <section id="kontak" class="bg-[#670D2F] text-white py-12">
+  <div class="mx-auto px-4">
+    <!-- Judul -->
+    <div class="text-center mb-12">
+          <h2
+            class="text-3xl font-bold text-white underline underline-offset-8 decoration-[#A53860] decoration-4 uppercase tracking-widest mb-5"
+          >
+            contact me
+          </h2>
+    <p class="text-center text-gray-300 mb-10">
+      HUBUNGI KAMI JIKA INGIN BEKERJA SAMA
+    </p>
+
+    <!-- Form -->
+    <div class="max-w-2xl mx-auto bg-[#A53860] p-8 rounded-lg shadow-lg">
+      <form action="#" method="POST" class="space-y-6">
+        <!-- Name & Email sejajar -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div>
+            <label for="name" class="block text-sm text-left font-semibold mb-2">NAME</label>
+            <input type="text" id="name" name="name"
+              class="w-full px-4 py-2 rounded-md bg-[#670D2F] text-white border border-white focus:outline-none focus:ring-2 focus:ring-orange-500">
+          </div>
+          <div>
+            <label for="email" class="block text-sm text-left font-semibold mb-2">EMAIL</label>
+            <input type="email" id="email" name="email"
+              class="w-full px-4 py-2 rounded-md bg-[#670D2F] text-white border border-white focus:outline-none focus:ring-2 focus:ring-orange-500">
+          </div>
+        </div>
+
+        <!-- Message -->
+        <div>
+          <label for="message" class="block text-sm text-left font-semibold mb-2">MESSAGE</label>
+          <textarea id="message" name="message" rows="5"
+            class="w-full px-4 py-2 rounded-md bg-[#670D2F] text-white border border-white focus:outline-none focus:ring-2 focus:ring-orange-500"></textarea>
+        </div>
+
+        <!-- Tombol -->
+        <div class="text-left">
+          <button type="submit"
+            class="bg-[#670D2F] hover:bg-[#A53860] text-white font-semibold px-6 py-2 rounded-md shadow-md">
+            Send Message
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer class="bg-[#852146] text-white pt-10">
+  <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-8">
+    <!-- Info kontak -->
+    <div>
+      <h3 class="text-xl font-bold mb-4">Contact Me</h3>
+      <p class="text-slate-100 mb-2">📍 Jl.tugas banyak kepala puyeng jonggol,bogor </p>
+      <p class="text-slate-100 mb-2">📞 08 kepobanget</p>
+      <p class="text-slate-100 mb-2">✉️ nabilasalsabilan948@gmail.com</p>
+      <div class="flex space-x-4 mt-5 w-[100px]">
+        <a href="https://www.instagram.com/queenazy_?igsh=aXZiaDgzZTQ3OTdn&utm_source=qr"><i class="fa-brands fa-instagram"></i></a>
+        <a href=""><i class="fa-brands fa-whatsapp"></i></a>
+        <a href=""><i class="fa-brands fa-facebook"></i></a>
+      </div>
+    </div>
+
+    <!-- Map -->
+    <div>
+      <h3 class="text-xl font-bold mb-4">My Location</h3>
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126851.92031149424!2d106.9731515859181!3d-6.506172760584455!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69bcf820706da1%3A0xe01302d7eb5047b8!2sKec.%20Jonggol%2C%20Kabupaten%20Bogor%2C%20Jawa%20Barat!5e0!3m2!1sid!2sid!4v1756971208242!5m2!1sid!2sid"
+        width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        class="rounded-lg shadow-lg">
+      </iframe>
+    </div>
+  </div>
+
+  <!-- Copyright -->
+  <div class=" bg-[#3A0519] border-t border-[#3A0519] mt-10 py-4 text-center text-white">
+    @bynabila_salsabila/liyya
+  </div>
+</footer>
+
+  </body>
+</html>
